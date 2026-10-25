@@ -376,3 +376,80 @@ header {
         scroll-behavior: auto !important;
     }
 }
+
+/* Responsive layout improvements: phones, tablets, laptops and desktops */
+img, video, iframe { max-width: 100%; }
+video { display: block; }
+body { overflow-x: hidden; }
+.container, section, header, footer { min-width: 0; }
+.hero-section { height: min(100svh, 1000px); min-height: 540px; }
+.hero-video { position: absolute; inset: 0; object-fit: cover; }
+.hero-info p { line-height: 1.7; }
+.info-section { width: min(1180px, 90%); }
+.info-cards { gap: clamp(14px, 2vw, 28px); }
+.card { min-width: 0; }
+.card video { max-width: 100%; object-fit: cover; }
+.about-section h1, .contact-section h1 { overflow-wrap: anywhere; }
+.footer-contact a { overflow-wrap: anywhere; }
+
+@media (min-width: 1200px) {
+  header { padding-inline: clamp(32px, 5vw, 84px); }
+  .hero-info { left: max(5%, calc((100vw - 1400px) / 2)); }
+}
+@media (max-width: 900px) {
+  header { gap: 12px; }
+  .head-right { flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; }
+  .head-right a { padding: 8px 10px; font-size: clamp(9px, 1.15vw, 12px); }
+  .hero-info { max-width: 86%; }
+  .hero-info h1 { font-size: clamp(42px, 7vw, 72px); }
+  .info-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 72px; }
+  header { position: absolute; padding: 9px 12px; align-items: center; gap: 6px; }
+  .head-left img { width: 34px; height: 34px; }
+  .head-right { flex: 1; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px; }
+  .head-right p { line-height: 1; }
+  .head-right a { padding: 7px 5px; font-size: clamp(8px, 2.1vw, 10px); letter-spacing: 0; }
+  .hero-section { height: 88svh; min-height: 520px; max-height: 780px; }
+  .hero-info { top: 20%; left: 6%; right: 6%; max-width: none; }
+  .hero-brand { font-size: clamp(24px, 7vw, 34px); margin-bottom: 12px; }
+  .hero-info h1 { font-size: clamp(36px, 10vw, 58px); line-height: 1.02; letter-spacing: -1.5px; }
+  .hero-info p { max-width: 100%; font-size: clamp(12px, 3.4vw, 15px); }
+  .hero-info button { max-width: 100%; white-space: normal; }
+  .gaming-text { font-size: clamp(34px, 10vw, 50px); }
+  .about-section { padding-inline: 6%; }
+  .about-section h1 { font-size: clamp(30px, 8.5vw, 44px); line-height: 1.08; }
+  .about-section h4 { font-size: clamp(18px, 5vw, 24px); }
+  .about-section h5 { font-size: 13px; line-height: 1.7; }
+  .image-box { width: min(82vw, 340px); height: min(112vw, 440px); }
+  .stones-img { max-width: 100%; }
+  .info-section { width: 92%; margin-top: 52px; }
+  .info-section > h3 { font-size: clamp(25px, 7vw, 36px); }
+  .info-section > p { font-size: 13px; line-height: 1.6; }
+  .info-cards { grid-template-columns: minmax(0, 1fr); }
+  .card { min-height: 0; }
+  .card-copy { padding: clamp(18px, 5vw, 26px); }
+  .card h1 { font-size: clamp(21px, 6vw, 27px); }
+  .card p, .card li { font-size: 13px; line-height: 1.6; }
+  .contact-section { min-height: auto; padding: 56px 5% 30px; margin-top: 42px; }
+  .contact-section h1 { max-width: 100%; font-size: clamp(30px, 8.2vw, 44px); line-height: 1.1; }
+  .contact-section .img1, .contact-section .img2, .contact-section .img3 { opacity: .25; }
+  .orange-contact-form { width: 100%; max-width: 100%; margin: 24px auto; padding: clamp(16px, 5vw, 24px); border-radius: 14px; }
+  .orange-contact-form label { font-size: 13px; }
+  .orange-contact-form input, .orange-contact-form select, .orange-contact-form textarea { font-size: 16px; padding: 13px 12px; }
+  .orange-contact-form textarea { min-height: 115px; }
+  .orange-contact-form .send-whatsapp { font-size: 14px; padding: 15px 12px; }
+  .footer { padding: 25px 6%; gap: 24px; }
+  .footer-brand { font-size: 24px; }
+  .footer-contact { align-items: center; max-width: 100%; }
+  .footer-contact a, .footer-contact p { font-size: 12px; overflow-wrap: anywhere; }
+  .footer-bottom { gap: 10px; }
+}
+@media (max-width: 360px) {
+  header { padding-inline: 8px; }
+  .head-left img { width: 29px; height: 29px; }
+  .head-right a { padding-inline: 3px; font-size: 8px; }
+  .hero-info h1 { font-size: 34px; }
+  .orange-contact-form { padding: 15px 12px; }
+}
